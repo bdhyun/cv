@@ -1,39 +1,28 @@
 body {
+  background-color: #FDFFFC;
+  color: #40514E;
   font-family: 'Merriweather', serif;
   margin: 0;
   text-align: center;
-  background-color: #FDFFFC;
 }
 
 h1 {
-  /* color: #66BFBF; */
   color: #022847;
-  line-height: 2;
+  line-height: 1.5;
 /* if you set the font-size for a header, then if the user has a Google font preference (say they like
 their text to be large), then the font-size won't change to accomodate for these preferences.
 In order to make the header dynamic, instead of using pixels, use percentages.) */
-  /* font-family: 'Sacramento', cursive;
-  font-size: 5.625rem;
-  font-family: 'Permanent Marker', cursive; */
   font-family: 'Rock Salt', cursive;
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 100;
 
-/* this margin top value gets rid of the default styling placed by the browser */
-  margin: 0 auto 0 auto;
+  /* this margin top value gets rid of the default styling placed by the browser */
+  margin: 0 auto;
 
-  padding-top: 270px;
-/* for centering elements that have an explicitly defined width
+  padding-top: 220px;
+  /* for centering elements that have an explicitly defined width
   width: 10%;
-  margin: 0 auto 0 auto;
-*/
-}
-
-.programmer {
-  padding: 0;
-  font-family: 'Rock Salt', cursive;
-  font-size: 4rem;
-  font-weight: 100;
+  margin: 0 auto 0 auto; */
 }
 
 h2 {
@@ -55,6 +44,14 @@ a {
   color: #11999E;
 }
 
+hr {
+  border: dotted #C7D6D6 6px;
+  border-bottom: none;
+  border-width: 8px;
+  margin-bottom: 100px;
+  width: 4%;
+}
+
 /*
 
 Text-align will center inline block elements or full-width block elements.
@@ -66,11 +63,15 @@ In this case, you can use the auto value for the margin attribute to center elem
 */
 
 .top-container {
-  /* background-color: #EAF6F6; */
-  /* background-color: #FDFFFC; */
-  background-image: url(../images/bg1.png);
   position: relative;
-  height: 945px;
+  height: 706px;
+}
+
+.top-container-bg {
+  position: absolute;
+    left: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 .im-brian {
@@ -81,11 +82,13 @@ In this case, you can use the auto value for the margin attribute to center elem
   animation-duration: 2s;
   animation-delay: 3s;
   font-size: 0.6rem;
+  margin-top: 20px;
 }
 
-.bg2 {
+.middle-container-bg {
   position: absolute;
     left: 0;
+  width: 100%;
   z-index: -1;
 }
 
@@ -96,25 +99,18 @@ In this case, you can use the auto value for the margin attribute to center elem
   line-height: 2;
 }
 
+/* styling for the "pro" in programmer */
+
 .pro {
   text-decoration: underline;
 }
 
-.top-cloud {
-  position: absolute;
-    right: 500px;
-    top: 100px;
-}
-
-.bottom-cloud {
-  position: absolute;
-    left: 500px;
-    bottom: 300px;
-}
-
-.mountain {
-  position: relative;
-  top: 77px;
+.programmer {
+  font-family: 'Rock Salt', cursive;
+  font-size: 3.5rem;
+  font-weight: 100;
+  line-height: 1.5;
+  padding: 0;
 }
 
 .profile-hello {
@@ -129,23 +125,12 @@ In this case, you can use the auto value for the margin attribute to center elem
 }
 
 .profile-description {
-  color: #40514E;
   display: inline-block;
   line-height: 2;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   margin-bottom: 100px;
-  margin-top: 50px;
-  width: 400px;
-}
-
-hr {
-  /* border-color: #EAF6F6; */
-  border-color: #C7D6D6;
-  border-style: none;
-  border-top-style: dotted;
-  border-width: 8px;
-  margin-bottom: 100px;
-  width: 70px;
+  margin-top: 40px;
+  width: 30%;
 }
 
 .web-dev-icon {
@@ -173,18 +158,19 @@ hr {
   font-size: 2.4em;
 }
 
-.contact-h3 {
+.contact-comment {
   display: inline-block;
   font-size: 1.1rem;
   margin: 50px 0;
+  width: 70%;
 }
 
-.contact-p {
+.contact-message {
   display: inline-block;
   font-size: 1rem;
   line-height: 2;
-  width: 650px;
   margin: 0 auto 50px auto;
+  width: 40%;
 }
 
 .BUTTON_TOW {
@@ -194,12 +180,12 @@ hr {
   background-image: -ms-linear-gradient(top, #09C6F9, #045DE9);
   background-image: -o-linear-gradient(top, #09C6F9, #045DE9);
   background-image: linear-gradient(to bottom, #09C6F9, #045DE9);
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
   color: #FFFFFF;
   font-family: 'Montserrat', sans-serif;
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 100;
   padding: 35px;
   text-decoration: none;
@@ -208,7 +194,7 @@ hr {
   text-align: center;
   margin-bottom: 80px;
   transform: scale(0.5);
-  width: 15%;
+  width: 20%;
 }
 
 .BUTTON_TOW:hover {
@@ -218,19 +204,17 @@ hr {
   background-image: -ms-linear-gradient(top, #1E62D0, #3D94F6);
   background-image: -o-linear-gradient(top, #1E62D0, #3D94F6);
   background-image: linear-gradient(to bottom, #1E62D0, #3D94F6);
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
   text-decoration: none;
 }
 
 .bottom-container {
-  /* background-color: #66BFBF; */
-  height: 260px;
-  margin-bottom: 20px;
+  height: 230px;
   text-align: center;
-  width: 100%;
   position: relative;
+  width: 100%;
 }
 
 .bottom-container2 {
@@ -241,20 +225,19 @@ hr {
 }
 
 .footer-link {
-  /* color: #11999E; */
   color: #022847;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
   text-decoration: none;
   font-size: 1em;
+  font-weight: 700;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
 }
 
 .linkedin {
   padding-right: 40px;
-}
-
-.footer-link:hover {
-  color: white;
 }
 
 .copyright {
