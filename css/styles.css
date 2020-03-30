@@ -19,7 +19,7 @@ In order to make the header dynamic, instead of using pixels, use percentages.) 
   /* this margin top value gets rid of the default styling placed by the browser */
   margin: 0 auto;
 
-  padding-top: 220px;
+  padding-top: 300px;
   /* for centering elements that have an explicitly defined width
   width: 10%;
   margin: 0 auto 0 auto; */
@@ -64,7 +64,7 @@ In this case, you can use the auto value for the margin attribute to center elem
 
 .top-container {
   position: relative;
-  height: 706px;
+  height: 850px;
 }
 
 .top-container-bg {
@@ -99,17 +99,7 @@ In this case, you can use the auto value for the margin attribute to center elem
   line-height: 2;
 }
 
-/* styling for the "pro" in programmer */
-
-.pro {
-  text-decoration: underline;
-}
-
 .programmer {
-  font-family: 'Rock Salt', cursive;
-  font-size: 3.5rem;
-  font-weight: 100;
-  line-height: 1.5;
   padding: 0;
 }
 
